@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ3-tA-XU1">
+                                <rect key="frame" x="232" y="280" width="136" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m22-nB-vxq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GJ3-tA-XU1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="adu-kN-Dok"/>
+                            <constraint firstItem="GJ3-tA-XU1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eS6-VG-FDH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="lnR-l1-h9D" kind="show" identifier="AuthorizationCompletedSegue" id="AWL-Yb-Xrf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="539"/>
+        </scene>
+        <!--Device Selection Table View Controller-->
+        <scene sceneID="aGK-F5-Uwt">
+            <objects>
+                <tableViewController id="W26-fz-PeG" customClass="DeviceSelectionTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gOa-8y-8Cg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weaveDeviceSelectionCellIdentifier" id="Hd1-ad-RY4">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hd1-ad-RY4" id="4gK-qB-X72">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W26-fz-PeG" id="rLy-u8-atj"/>
+                            <outlet property="delegate" destination="W26-fz-PeG" id="bGc-9D-PtA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="N58-Gh-aQi"/>
+                    <connections>
+                        <segue destination="Gnm-BZ-SiZ" kind="show" identifier="DeviceSelectedSegue" id="9sW-dx-xGF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYf-UF-ARY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="539"/>
+        </scene>
+        <!--Led Flasher View Controller-->
+        <scene sceneID="iKR-yE-muq">
+            <objects>
+                <viewController id="Gnm-BZ-SiZ" customClass="LedFlasherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aaH-U5-pV7"/>
+                        <viewControllerLayoutGuide type="bottom" id="SJQ-oa-tNR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lTx-Dx-p4d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOs-qO-h4D">
+                                <rect key="frame" x="206" y="72" width="188" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIJ-t8-ifF">
+                                <rect key="frame" x="206" y="232" width="51" height="31"/>
+                                <connections>
+                                    <action selector="ledSwitchValueChanged:" destination="Gnm-BZ-SiZ" eventType="valueChanged" id="ov2-rp-Kzs"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-VE-ENz">
+                                <rect key="frame" x="206" y="298" width="51" height="31"/>
+                                <connections>
+                                    <action selector="ledSwitchValueChanged:" destination="Gnm-BZ-SiZ" eventType="valueChanged" id="I0B-cU-pLS"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LED1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0j-mc-MhI">
+                                <rect key="frame" x="348" y="170" width="46" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LED2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q0-il-MsM">
+                                <rect key="frame" x="346" y="236" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LED3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dv-JI-VDp">
+                                <rect key="frame" x="345" y="302" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnF-ub-ZzJ">
+                                <rect key="frame" x="206" y="166" width="51" height="31"/>
+                                <connections>
+                                    <action selector="ledSwitchValueChanged:" destination="Gnm-BZ-SiZ" eventType="valueChanged" id="Wni-et-HDH"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yOs-qO-h4D" firstAttribute="top" secondItem="aaH-U5-pV7" secondAttribute="bottom" constant="8" id="8CH-OX-rhB"/>
+                            <constraint firstItem="7Dv-JI-VDp" firstAttribute="trailing" secondItem="yOs-qO-h4D" secondAttribute="trailing" id="DYP-5x-SCh"/>
+                            <constraint firstItem="q0j-mc-MhI" firstAttribute="centerY" secondItem="cnF-ub-ZzJ" secondAttribute="centerY" id="IR3-5o-tM4"/>
+                            <constraint firstItem="cy9-VE-ENz" firstAttribute="leading" secondItem="yOs-qO-h4D" secondAttribute="leading" id="LcT-Qg-sW5"/>
+                            <constraint firstItem="9Q0-il-MsM" firstAttribute="trailing" secondItem="yOs-qO-h4D" secondAttribute="trailing" id="McI-xu-sMJ"/>
+                            <constraint firstItem="yOs-qO-h4D" firstAttribute="leading" secondItem="uIJ-t8-ifF" secondAttribute="leading" id="RB5-Rs-2WS"/>
+                            <constraint firstItem="7Dv-JI-VDp" firstAttribute="centerY" secondItem="cy9-VE-ENz" secondAttribute="centerY" id="YJW-1I-nAE"/>
+                            <constraint firstItem="yOs-qO-h4D" firstAttribute="centerX" secondItem="lTx-Dx-p4d" secondAttribute="centerX" id="cR4-6r-S5N"/>
+                            <constraint firstItem="9Q0-il-MsM" firstAttribute="centerY" secondItem="uIJ-t8-ifF" secondAttribute="centerY" id="jXH-m0-YF6"/>
+                            <constraint firstItem="cnF-ub-ZzJ" firstAttribute="leading" secondItem="yOs-qO-h4D" secondAttribute="leading" id="kQY-U6-ELH"/>
+                            <constraint firstItem="cnF-ub-ZzJ" firstAttribute="top" secondItem="yOs-qO-h4D" secondAttribute="bottom" constant="65" id="kgw-Nn-Bq2"/>
+                            <constraint firstItem="q0j-mc-MhI" firstAttribute="trailing" secondItem="yOs-qO-h4D" secondAttribute="trailing" id="vCs-sr-pQG"/>
+                            <constraint firstItem="uIJ-t8-ifF" firstAttribute="top" secondItem="cnF-ub-ZzJ" secondAttribute="bottom" constant="35" id="y0z-hl-eJ8"/>
+                            <constraint firstItem="cy9-VE-ENz" firstAttribute="top" secondItem="uIJ-t8-ifF" secondAttribute="bottom" constant="35" id="ylZ-Bi-rfR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectionLabel" destination="yOs-qO-h4D" id="tRE-3l-VAM"/>
+                        <outlet property="led1Switch" destination="cnF-ub-ZzJ" id="4vS-8I-tdP"/>
+                        <outlet property="led2Switch" destination="uIJ-t8-ifF" id="Bdm-J4-gkM"/>
+                        <outlet property="led3Switch" destination="cy9-VE-ENz" id="fyk-tP-uCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="By1-zR-PIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="539"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gOi-Tz-3cv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lnR-l1-h9D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bmx-GM-UbR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W26-fz-PeG" kind="relationship" relationship="rootViewController" id="GJx-M8-6SW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yZ-Hx-Qcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="539"/>
+        </scene>
+    </scenes>
+</document>

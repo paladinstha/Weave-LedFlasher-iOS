@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA06D6461BBAE0A200232A42 /* LedFlasherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06D6451BBAE0A200232A42 /* LedFlasherViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA54C6911BB98DCA008FC61F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6901BB98DCA008FC61F /* main.m */; };
+		EA54C6941BB98DCA008FC61F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6931BB98DCA008FC61F /* AppDelegate.m */; };
+		EA54C6971BB98DCA008FC61F /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6961BB98DCA008FC61F /* AuthViewController.m */; };
+		EA54C69A1BB98DCA008FC61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA54C6981BB98DCA008FC61F /* Main.storyboard */; };
+		EA54C69C1BB98DCA008FC61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA54C69B1BB98DCA008FC61F /* Assets.xcassets */; };
+		EA54C69F1BB98DCA008FC61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA54C69D1BB98DCA008FC61F /* LaunchScreen.storyboard */; };
+		EA54C6AA1BB99480008FC61F /* WeaveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6A91BB99480008FC61F /* WeaveConstants.m */; settings = {ASSET_TAGS = (); }; };
+		EA54C6B31BB9AEB8008FC61F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B21BB9AEB8008FC61F /* CoreBluetooth.framework */; };
+		EA54C6B51BB9AEC2008FC61F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B41BB9AEC2008FC61F /* SystemConfiguration.framework */; };
+		EA54C6B71BB9AEEA008FC61F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B61BB9AEEA008FC61F /* UIKit.framework */; };
+		EA54C6B91BB9AEF1008FC61F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B81BB9AEF1008FC61F /* WebKit.framework */; };
+		EA54C6BB1BB9AEFA008FC61F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6BA1BB9AEFA008FC61F /* CoreGraphics.framework */; };
+		EA54C6C51BB9B935008FC61F /* DeviceSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6C41BB9B935008FC61F /* DeviceSelectionTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EAD5E00B1BBDE0F000809409 /* WeaveAuthorizerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD5E00A1BBDE0F000809409 /* WeaveAuthorizerManager.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA06D64C1BBAF43800232A42 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA06D6441BBAE0A200232A42 /* LedFlasherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LedFlasherViewController.h; sourceTree = "<group>"; };
+		EA06D6451BBAE0A200232A42 /* LedFlasherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedFlasherViewController.m; sourceTree = "<group>"; };
+		EA54C68C1BB98DCA008FC61F /* LED Flasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LED Flasher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA54C6901BB98DCA008FC61F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA54C6921BB98DCA008FC61F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA54C6931BB98DCA008FC61F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA54C6951BB98DCA008FC61F /* AuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		EA54C6961BB98DCA008FC61F /* AuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		EA54C6991BB98DCA008FC61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA54C69B1BB98DCA008FC61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA54C69E1BB98DCA008FC61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA54C6A01BB98DCA008FC61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA54C6A81BB99480008FC61F /* WeaveConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaveConstants.h; sourceTree = "<group>"; };
+		EA54C6A91BB99480008FC61F /* WeaveConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaveConstants.m; sourceTree = "<group>"; };
+		EA54C6B21BB9AEB8008FC61F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		EA54C6B41BB9AEC2008FC61F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA54C6B61BB9AEEA008FC61F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA54C6B81BB9AEF1008FC61F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EA54C6BA1BB9AEFA008FC61F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA54C6C31BB9B935008FC61F /* DeviceSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSelectionTableViewController.h; sourceTree = "<group>"; };
+		EA54C6C41BB9B935008FC61F /* DeviceSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSelectionTableViewController.m; sourceTree = "<group>"; };
+		EAD5E0091BBDE0F000809409 /* WeaveAuthorizerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaveAuthorizerManager.h; sourceTree = "<group>"; };
+		EAD5E00A1BBDE0F000809409 /* WeaveAuthorizerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaveAuthorizerManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA54C6891BB98DCA008FC61F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA54C6BB1BB9AEFA008FC61F /* CoreGraphics.framework in Frameworks */,
+				EA54C6B91BB9AEF1008FC61F /* WebKit.framework in Frameworks */,
+				EA54C6B71BB9AEEA008FC61F /* UIKit.framework in Frameworks */,
+				EA54C6B51BB9AEC2008FC61F /* SystemConfiguration.framework in Frameworks */,
+				EA54C6B31BB9AEB8008FC61F /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA54C6831BB98DCA008FC61F = {
+			isa = PBXGroup;
+			children = (
+				EA54C68E1BB98DCA008FC61F /* LED Flasher */,
+				EA54C68D1BB98DCA008FC61F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA54C68D1BB98DCA008FC61F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA54C68C1BB98DCA008FC61F /* LED Flasher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA54C68E1BB98DCA008FC61F /* LED Flasher */ = {
+			isa = PBXGroup;
+			children = (
+				EAD5E0081BBDE0B500809409 /* Controllers */,
+				EA54C6921BB98DCA008FC61F /* AppDelegate.h */,
+				EA54C6931BB98DCA008FC61F /* AppDelegate.m */,
+				EA54C6A81BB99480008FC61F /* WeaveConstants.h */,
+				EA54C6A91BB99480008FC61F /* WeaveConstants.m */,
+				EAD5E0091BBDE0F000809409 /* WeaveAuthorizerManager.h */,
+				EAD5E00A1BBDE0F000809409 /* WeaveAuthorizerManager.m */,
+				EA54C6981BB98DCA008FC61F /* Main.storyboard */,
+				EA54C69D1BB98DCA008FC61F /* LaunchScreen.storyboard */,
+				EA54C68F1BB98DCA008FC61F /* Supporting Files */,
+			);
+			path = "LED Flasher";
+			sourceTree = "<group>";
+		};
+		EA54C68F1BB98DCA008FC61F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA54C6A01BB98DCA008FC61F /* Info.plist */,
+				EA54C69B1BB98DCA008FC61F /* Assets.xcassets */,
+				EA54C6C01BB9B460008FC61F /* Frameworks */,
+				EA54C6901BB98DCA008FC61F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA54C6C01BB9B460008FC61F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA54C6BA1BB9AEFA008FC61F /* CoreGraphics.framework */,
+				EA54C6B61BB9AEEA008FC61F /* UIKit.framework */,
+				EA54C6B81BB9AEF1008FC61F /* WebKit.framework */,
+				EA54C6B41BB9AEC2008FC61F /* SystemConfiguration.framework */,
+				EA54C6B21BB9AEB8008FC61F /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAD5E0081BBDE0B500809409 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA54C6951BB98DCA008FC61F /* AuthViewController.h */,
+				EA54C6961BB98DCA008FC61F /* AuthViewController.m */,
+				EA54C6C31BB9B935008FC61F /* DeviceSelectionTableViewController.h */,
+				EA54C6C41BB9B935008FC61F /* DeviceSelectionTableViewController.m */,
+				EA06D6441BBAE0A200232A42 /* LedFlasherViewController.h */,
+				EA06D6451BBAE0A200232A42 /* LedFlasherViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA54C68B1BB98DCA008FC61F /* LED Flasher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA54C6A31BB98DCA008FC61F /* Build configuration list for PBXNativeTarget "LED Flasher" */;
+			buildPhases = (
+				EA54C6881BB98DCA008FC61F /* Sources */,
+				EA54C6891BB98DCA008FC61F /* Frameworks */,
+				EA54C68A1BB98DCA008FC61F /* Resources */,
+				EA06D64C1BBAF43800232A42 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LED Flasher";
+			productName = "LED Flasher";
+			productReference = EA54C68C1BB98DCA008FC61F /* LED Flasher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA54C6841BB98DCA008FC61F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Google;
+				TargetAttributes = {
+					EA54C68B1BB98DCA008FC61F = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = EA54C6871BB98DCA008FC61F /* Build configuration list for PBXProject "LED Flasher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA54C6831BB98DCA008FC61F;
+			productRefGroup = EA54C68D1BB98DCA008FC61F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA54C68B1BB98DCA008FC61F /* LED Flasher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA54C68A1BB98DCA008FC61F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA54C69F1BB98DCA008FC61F /* LaunchScreen.storyboard in Resources */,
+				EA54C69C1BB98DCA008FC61F /* Assets.xcassets in Resources */,
+				EA54C69A1BB98DCA008FC61F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA54C6881BB98DCA008FC61F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA54C6AA1BB99480008FC61F /* WeaveConstants.m in Sources */,
+				EA54C6971BB98DCA008FC61F /* AuthViewController.m in Sources */,
+				EA54C6941BB98DCA008FC61F /* AppDelegate.m in Sources */,
+				EA54C6911BB98DCA008FC61F /* main.m in Sources */,
+				EA06D6461BBAE0A200232A42 /* LedFlasherViewController.m in Sources */,
+				EAD5E00B1BBDE0F000809409 /* WeaveAuthorizerManager.m in Sources */,
+				EA54C6C51BB9B935008FC61F /* DeviceSelectionTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA54C6981BB98DCA008FC61F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA54C6991BB98DCA008FC61F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA54C69D1BB98DCA008FC61F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA54C69E1BB98DCA008FC61F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA54C6A11BB98DCA008FC61F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA54C6A21BB98DCA008FC61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA54C6A41BB98DCA008FC61F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LED\\ Flasher/**",
+					Flasher,
+					"$(PROJECT_DIR)/LED",
+					Flasher,
+				);
+				INFOPLIST_FILE = "LED Flasher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.LED-Flasher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA54C6A51BB98DCA008FC61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LED\\ Flasher/**",
+					Flasher,
+					"$(PROJECT_DIR)/LED",
+					Flasher,
+				);
+				INFOPLIST_FILE = "LED Flasher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.LED-Flasher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA54C6871BB98DCA008FC61F /* Build configuration list for PBXProject "LED Flasher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA54C6A11BB98DCA008FC61F /* Debug */,
+				EA54C6A21BB98DCA008FC61F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA54C6A31BB98DCA008FC61F /* Build configuration list for PBXNativeTarget "LED Flasher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA54C6A41BB98DCA008FC61F /* Debug */,
+				EA54C6A51BB98DCA008FC61F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA54C6841BB98DCA008FC61F /* Project object */;
+}
