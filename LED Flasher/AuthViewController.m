@@ -41,7 +41,7 @@
   // We have to watch here to know when authentication is complete, as the block that runs on
   // completion executes before this view controller regains control.
   if (_moveToDeviceSelection) {
-    [self performSegueWithIdentifier:@"AuthorizationCompletedSegue" sender:self];
+    [self performSegueWithIdentifier:kWeaveAuthorizationCompletedSegueIdentifier sender:self];
   }
 }
 
@@ -52,9 +52,11 @@
     if (error) {
       NSLog(@"An error occurred during authentication - %@", error);
     } else {
-      // Now that we have a valid authorizer, we can save it and move on to device selection.
-      [WeaveAuthorizerManager setAuthorizer:authorizer];
-      self.moveToDeviceSelection = YES;
+      if (authorizer) {
+        // Now that we have a valid authorizer, we can save it and move on to device selection.
+        [WeaveAuthorizerManager setAuthorizer:authorizer];
+        self.moveToDeviceSelection = YES;
+      }
     }
   }];
 }

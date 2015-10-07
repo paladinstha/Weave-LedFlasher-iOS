@@ -21,6 +21,7 @@
 extern NSString *const kWeaveClientId;
 extern NSString *const kWeaveClientSecret;
 extern NSString *const kWeaveDeviceSelectionCellIdentifier;
+extern NSString *const kWeaveAuthorizationCompletedSegueIdentifier;
 extern const char *kWeaveAuthorizerManagerQueueLabel;
 
 @end

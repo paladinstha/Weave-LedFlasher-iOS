@@ -65,37 +65,6 @@
   [destination setDevice:_device];
 }
 
-# pragma mark UITableViewDelegate implementation
-
-- (void)tableView:(UITableView *)tableView
-    didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-  NSInteger index = [indexPath row];
-  if (index == 0) {
-    return;
-  } else {
-    self.device = [_knownDevices objectAtIndex:index];
-    [[GWLDiscovery sharedInstance] stop];
-    // A device has been selected - launch the control view.
-    [self performSegueWithIdentifier:@"DeviceSelectedSegue" sender:self];
-  }
-}
-
-# pragma mark UITableViewDataSource implementation
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [[[GWLDiscovery sharedInstance] devices] count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell =
-      [tableView dequeueReusableCellWithIdentifier:kWeaveDeviceSelectionCellIdentifier
-                                      forIndexPath:indexPath];
-  GWLWeaveDevice *device = [_knownDevices objectAtIndex:[indexPath row]];
-  cell.textLabel.text = device.name;
-  return cell;
-}
-
 # pragma mark GWLDiscoveryDelegate implementation
 
 - (void)discoveryController:(GWLDiscovery *)controller didAddDevice:(GWLWeaveDevice *)device {
@@ -134,6 +103,37 @@
     [_knownDevices addObject:device];
     [self.tableView reloadData];
   }
+}
+
+# pragma mark UITableViewDelegate implementation
+
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+  NSInteger index = [indexPath row];
+  if (index == 0) {
+    return;
+  } else {
+    self.device = [_knownDevices objectAtIndex:index];
+    [[GWLDiscovery sharedInstance] stop];
+    // A device has been selected - launch the control view.
+    [self performSegueWithIdentifier:@"DeviceSelectedSegue" sender:self];
+  }
+}
+
+# pragma mark UITableViewDataSource implementation
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [[[GWLDiscovery sharedInstance] devices] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell =
+      [tableView dequeueReusableCellWithIdentifier:kWeaveDeviceSelectionCellIdentifier
+                                      forIndexPath:indexPath];
+  GWLWeaveDevice *device = [_knownDevices objectAtIndex:[indexPath row]];
+  cell.textLabel.text = device.name;
+  return cell;
 }
 
 @end

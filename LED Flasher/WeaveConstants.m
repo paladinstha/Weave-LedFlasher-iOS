@@ -27,6 +27,9 @@ NSString *const kWeaveClientSecret = @"";
 // Constant for table view recycling.
 NSString *const kWeaveDeviceSelectionCellIdentifier = @"weaveDeviceSelectionCellIdentifier";
 
+// Constant for segue from authorization to device selection.
+NSString *const kWeaveAuthorizationCompletedSegueIdentifier = @"AuthorizationCompletedSegue";
+
 // Constant for the WeaveAuthorizerManager's dispatch queue.
 const char *kWeaveAuthorizerManagerQueueLabel = "weaveAuthorizerManagerQueue";
 

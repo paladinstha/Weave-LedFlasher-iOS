@@ -63,6 +63,15 @@
   }];
 }
 
+# pragma mark Switch actions
+
+- (IBAction)ledSwitchValueChanged:(id)sender {
+  // Determine which switch was changed.
+  NSInteger ledNumber = [sender tag];
+  // Set the state on the appropriate LED.
+  [self setLed:ledNumber toState:[(UISwitch *)sender isOn]];
+}
+
 #pragma mark _ledflasher commands
 
 - (void)setLed:(NSInteger)ledNum toState:(BOOL)state {
@@ -75,19 +84,10 @@
   [txport execute:ledCommand
            device:_device
           handler:^(GWLWeaveCommandResult *result, NSError *error) {
-    if (error) {
-      NSLog(@"An error occurred during command execution - %@", error);
-    }
+      if (error) {
+        NSLog(@"An error occurred during command execution - %@", error);
+      }
   }];
-}
-
-# pragma mark Switch actions
-
-- (IBAction)ledSwitchValueChanged:(id)sender {
-  // Determine which switch was changed.
-  NSInteger ledNumber = [sender tag];
-  // Set the state on the appropriate LED.
-  [self setLed:ledNumber toState:[(UISwitch *)sender isOn]];
 }
 
 @end
