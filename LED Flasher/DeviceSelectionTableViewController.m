@@ -110,14 +110,10 @@
 - (void)tableView:(UITableView *)tableView
     didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
   NSInteger index = [indexPath row];
-  if (index == 0) {
-    return;
-  } else {
-    self.device = [_knownDevices objectAtIndex:index];
-    [[GWLDiscovery sharedInstance] stop];
-    // A device has been selected - launch the control view.
-    [self performSegueWithIdentifier:@"DeviceSelectedSegue" sender:self];
-  }
+  self.device = [_knownDevices objectAtIndex:index];
+  [[GWLDiscovery sharedInstance] stop];
+  // A device has been selected - launch the control view.
+  [self performSegueWithIdentifier:kWeaveDeviceSelectedSegueIdentifier sender:self];
 }
 
 # pragma mark UITableViewDataSource implementation

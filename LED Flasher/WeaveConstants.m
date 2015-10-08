@@ -30,6 +30,9 @@ NSString *const kWeaveDeviceSelectionCellIdentifier = @"weaveDeviceSelectionCell
 // Constant for segue from authorization to device selection.
 NSString *const kWeaveAuthorizationCompletedSegueIdentifier = @"AuthorizationCompletedSegue";
 
+// Constant for segue from device selection to command sending.
+NSString *const kWeaveDeviceSelectedSegueIdentifier = @"DeviceSelectedSegue";
+
 // Constant for the WeaveAuthorizerManager's dispatch queue.
 const char *kWeaveAuthorizerManagerQueueLabel = "weaveAuthorizerManagerQueue";
 
