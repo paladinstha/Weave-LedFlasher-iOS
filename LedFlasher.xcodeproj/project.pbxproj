@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA06D6461BBAE0A200232A42 /* LedFlasherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06D6451BBAE0A200232A42 /* LedFlasherViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EA54C6911BB98DCA008FC61F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6901BB98DCA008FC61F /* main.m */; };
-		EA54C6941BB98DCA008FC61F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6931BB98DCA008FC61F /* AppDelegate.m */; };
-		EA54C6971BB98DCA008FC61F /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6961BB98DCA008FC61F /* AuthViewController.m */; };
-		EA54C69A1BB98DCA008FC61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA54C6981BB98DCA008FC61F /* Main.storyboard */; };
-		EA54C69C1BB98DCA008FC61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA54C69B1BB98DCA008FC61F /* Assets.xcassets */; };
-		EA54C69F1BB98DCA008FC61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA54C69D1BB98DCA008FC61F /* LaunchScreen.storyboard */; };
-		EA54C6AA1BB99480008FC61F /* WeaveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6A91BB99480008FC61F /* WeaveConstants.m */; settings = {ASSET_TAGS = (); }; };
 		EA54C6B31BB9AEB8008FC61F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B21BB9AEB8008FC61F /* CoreBluetooth.framework */; };
 		EA54C6B51BB9AEC2008FC61F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B41BB9AEC2008FC61F /* SystemConfiguration.framework */; };
 		EA54C6B71BB9AEEA008FC61F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B61BB9AEEA008FC61F /* UIKit.framework */; };
 		EA54C6B91BB9AEF1008FC61F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6B81BB9AEF1008FC61F /* WebKit.framework */; };
 		EA54C6BB1BB9AEFA008FC61F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54C6BA1BB9AEFA008FC61F /* CoreGraphics.framework */; };
-		EA54C6C51BB9B935008FC61F /* DeviceSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C6C41BB9B935008FC61F /* DeviceSelectionTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EA6910F81BC6E96300337057 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6910F71BC6E96300337057 /* GTMOAuth2ViewTouch.xib */; settings = {ASSET_TAGS = (); }; };
-		EAD5E00B1BBDE0F000809409 /* WeaveAuthorizerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD5E00A1BBDE0F000809409 /* WeaveAuthorizerManager.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FB71BC8642F00372E76 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FB21BC8642F00372E76 /* AuthViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FB81BC8642F00372E76 /* DeviceSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FB41BC8642F00372E76 /* DeviceSelectionTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FB91BC8642F00372E76 /* LedFlasherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FB61BC8642F00372E76 /* LedFlasherViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FC01BC8644600372E76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBB1BC8644600372E76 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FC11BC8644600372E76 /* WeaveAuthorizerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBD1BC8644600372E76 /* WeaveAuthorizerManager.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FC21BC8644600372E76 /* WeaveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBF1BC8644600372E76 /* WeaveConstants.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FC61BC8645300372E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC31BC8645300372E76 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		EA605FC71BC8645300372E76 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */; settings = {ASSET_TAGS = (); }; };
+		EA605FC81BC8645300372E76 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC51BC8645300372E76 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		EA605FCA1BC8646400372E76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FC91BC8646400372E76 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		EA605FD11BC8650600372E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA605FCD1BC8650600372E76 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EA605FD21BC8650600372E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA605FCF1BC8650600372E76 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,30 +40,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA06D6441BBAE0A200232A42 /* LedFlasherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LedFlasherViewController.h; sourceTree = "<group>"; };
-		EA06D6451BBAE0A200232A42 /* LedFlasherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedFlasherViewController.m; sourceTree = "<group>"; };
-		EA54C68C1BB98DCA008FC61F /* LED Flasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LED Flasher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA54C6901BB98DCA008FC61F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA54C6921BB98DCA008FC61F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EA54C6931BB98DCA008FC61F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA54C6951BB98DCA008FC61F /* AuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
-		EA54C6961BB98DCA008FC61F /* AuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
-		EA54C6991BB98DCA008FC61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA54C69B1BB98DCA008FC61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EA54C69E1BB98DCA008FC61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EA54C6A01BB98DCA008FC61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA54C6A81BB99480008FC61F /* WeaveConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaveConstants.h; sourceTree = "<group>"; };
-		EA54C6A91BB99480008FC61F /* WeaveConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaveConstants.m; sourceTree = "<group>"; };
+		EA54C68C1BB98DCA008FC61F /* LedFlasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedFlasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA54C6B21BB9AEB8008FC61F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		EA54C6B41BB9AEC2008FC61F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EA54C6B61BB9AEEA008FC61F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA54C6B81BB9AEF1008FC61F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EA54C6BA1BB9AEFA008FC61F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EA54C6C31BB9B935008FC61F /* DeviceSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSelectionTableViewController.h; sourceTree = "<group>"; };
-		EA54C6C41BB9B935008FC61F /* DeviceSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSelectionTableViewController.m; sourceTree = "<group>"; };
-		EA6910F71BC6E96300337057 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
-		EAD5E0091BBDE0F000809409 /* WeaveAuthorizerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaveAuthorizerManager.h; sourceTree = "<group>"; };
-		EAD5E00A1BBDE0F000809409 /* WeaveAuthorizerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaveAuthorizerManager.m; sourceTree = "<group>"; };
+		EA605FB11BC8642F00372E76 /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthViewController.h; path = LedFlasher/AuthViewController.h; sourceTree = SOURCE_ROOT; };
+		EA605FB21BC8642F00372E76 /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthViewController.m; path = LedFlasher/AuthViewController.m; sourceTree = SOURCE_ROOT; };
+		EA605FB31BC8642F00372E76 /* DeviceSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceSelectionTableViewController.h; path = LedFlasher/DeviceSelectionTableViewController.h; sourceTree = SOURCE_ROOT; };
+		EA605FB41BC8642F00372E76 /* DeviceSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceSelectionTableViewController.m; path = LedFlasher/DeviceSelectionTableViewController.m; sourceTree = SOURCE_ROOT; };
+		EA605FB51BC8642F00372E76 /* LedFlasherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LedFlasherViewController.h; path = LedFlasher/LedFlasherViewController.h; sourceTree = SOURCE_ROOT; };
+		EA605FB61BC8642F00372E76 /* LedFlasherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LedFlasherViewController.m; path = LedFlasher/LedFlasherViewController.m; sourceTree = SOURCE_ROOT; };
+		EA605FBA1BC8644600372E76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LedFlasher/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		EA605FBB1BC8644600372E76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LedFlasher/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		EA605FBC1BC8644600372E76 /* WeaveAuthorizerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaveAuthorizerManager.h; path = LedFlasher/WeaveAuthorizerManager.h; sourceTree = SOURCE_ROOT; };
+		EA605FBD1BC8644600372E76 /* WeaveAuthorizerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaveAuthorizerManager.m; path = LedFlasher/WeaveAuthorizerManager.m; sourceTree = SOURCE_ROOT; };
+		EA605FBE1BC8644600372E76 /* WeaveConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaveConstants.h; path = LedFlasher/WeaveConstants.h; sourceTree = SOURCE_ROOT; };
+		EA605FBF1BC8644600372E76 /* WeaveConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaveConstants.m; path = LedFlasher/WeaveConstants.m; sourceTree = SOURCE_ROOT; };
+		EA605FC31BC8645300372E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LedFlasher/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = LedFlasher/GTMOAuth2ViewTouch.xib; sourceTree = SOURCE_ROOT; };
+		EA605FC51BC8645300372E76 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LedFlasher/Info.plist; sourceTree = SOURCE_ROOT; };
+		EA605FC91BC8646400372E76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LedFlasher/main.m; sourceTree = SOURCE_ROOT; };
+		EA605FCE1BC8650600372E76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LedFlasher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		EA605FD01BC8650600372E76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LedFlasher/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +85,7 @@
 		EA54C6831BB98DCA008FC61F = {
 			isa = PBXGroup;
 			children = (
-				EA54C68E1BB98DCA008FC61F /* LED Flasher */,
+				EA54C68E1BB98DCA008FC61F /* LedFlasher */,
 				EA54C68D1BB98DCA008FC61F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,36 +93,37 @@
 		EA54C68D1BB98DCA008FC61F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA54C68C1BB98DCA008FC61F /* LED Flasher.app */,
+				EA54C68C1BB98DCA008FC61F /* LedFlasher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA54C68E1BB98DCA008FC61F /* LED Flasher */ = {
+		EA54C68E1BB98DCA008FC61F /* LedFlasher */ = {
 			isa = PBXGroup;
 			children = (
 				EAD5E0081BBDE0B500809409 /* Controllers */,
-				EA54C6921BB98DCA008FC61F /* AppDelegate.h */,
-				EA54C6931BB98DCA008FC61F /* AppDelegate.m */,
-				EA54C6A81BB99480008FC61F /* WeaveConstants.h */,
-				EA54C6A91BB99480008FC61F /* WeaveConstants.m */,
-				EAD5E0091BBDE0F000809409 /* WeaveAuthorizerManager.h */,
-				EAD5E00A1BBDE0F000809409 /* WeaveAuthorizerManager.m */,
-				EA54C6981BB98DCA008FC61F /* Main.storyboard */,
-				EA54C69D1BB98DCA008FC61F /* LaunchScreen.storyboard */,
+				EA605FBA1BC8644600372E76 /* AppDelegate.h */,
+				EA605FBB1BC8644600372E76 /* AppDelegate.m */,
+				EA605FBC1BC8644600372E76 /* WeaveAuthorizerManager.h */,
+				EA605FBD1BC8644600372E76 /* WeaveAuthorizerManager.m */,
+				EA605FBE1BC8644600372E76 /* WeaveConstants.h */,
+				EA605FBF1BC8644600372E76 /* WeaveConstants.m */,
+				EA605FCD1BC8650600372E76 /* LaunchScreen.storyboard */,
+				EA605FCF1BC8650600372E76 /* Main.storyboard */,
 				EA54C68F1BB98DCA008FC61F /* Supporting Files */,
+				EA605FC91BC8646400372E76 /* main.m */,
 			);
+			name = LedFlasher;
 			path = "LED Flasher";
 			sourceTree = "<group>";
 		};
 		EA54C68F1BB98DCA008FC61F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA6910F71BC6E96300337057 /* GTMOAuth2ViewTouch.xib */,
-				EA54C6A01BB98DCA008FC61F /* Info.plist */,
-				EA54C69B1BB98DCA008FC61F /* Assets.xcassets */,
+				EA605FC31BC8645300372E76 /* Assets.xcassets */,
+				EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */,
+				EA605FC51BC8645300372E76 /* Info.plist */,
 				EA54C6C01BB9B460008FC61F /* Frameworks */,
-				EA54C6901BB98DCA008FC61F /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,12 +143,12 @@
 		EAD5E0081BBDE0B500809409 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA54C6951BB98DCA008FC61F /* AuthViewController.h */,
-				EA54C6961BB98DCA008FC61F /* AuthViewController.m */,
-				EA54C6C31BB9B935008FC61F /* DeviceSelectionTableViewController.h */,
-				EA54C6C41BB9B935008FC61F /* DeviceSelectionTableViewController.m */,
-				EA06D6441BBAE0A200232A42 /* LedFlasherViewController.h */,
-				EA06D6451BBAE0A200232A42 /* LedFlasherViewController.m */,
+				EA605FB11BC8642F00372E76 /* AuthViewController.h */,
+				EA605FB21BC8642F00372E76 /* AuthViewController.m */,
+				EA605FB31BC8642F00372E76 /* DeviceSelectionTableViewController.h */,
+				EA605FB41BC8642F00372E76 /* DeviceSelectionTableViewController.m */,
+				EA605FB51BC8642F00372E76 /* LedFlasherViewController.h */,
+				EA605FB61BC8642F00372E76 /* LedFlasherViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -154,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA54C68B1BB98DCA008FC61F /* LED Flasher */ = {
+		EA54C68B1BB98DCA008FC61F /* LedFlasher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA54C6A31BB98DCA008FC61F /* Build configuration list for PBXNativeTarget "LED Flasher" */;
+			buildConfigurationList = EA54C6A31BB98DCA008FC61F /* Build configuration list for PBXNativeTarget "LedFlasher" */;
 			buildPhases = (
 				EA54C6881BB98DCA008FC61F /* Sources */,
 				EA54C6891BB98DCA008FC61F /* Frameworks */,
@@ -167,9 +169,9 @@
 			);
 			dependencies = (
 			);
-			name = "LED Flasher";
+			name = LedFlasher;
 			productName = "LED Flasher";
-			productReference = EA54C68C1BB98DCA008FC61F /* LED Flasher.app */;
+			productReference = EA54C68C1BB98DCA008FC61F /* LedFlasher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA54C6871BB98DCA008FC61F /* Build configuration list for PBXProject "LED Flasher" */;
+			buildConfigurationList = EA54C6871BB98DCA008FC61F /* Build configuration list for PBXProject "LedFlasher" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -199,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA54C68B1BB98DCA008FC61F /* LED Flasher */,
+				EA54C68B1BB98DCA008FC61F /* LedFlasher */,
 			);
 		};
 /* End PBXProject section */
@@ -209,10 +211,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6910F81BC6E96300337057 /* GTMOAuth2ViewTouch.xib in Resources */,
-				EA54C69F1BB98DCA008FC61F /* LaunchScreen.storyboard in Resources */,
-				EA54C69C1BB98DCA008FC61F /* Assets.xcassets in Resources */,
-				EA54C69A1BB98DCA008FC61F /* Main.storyboard in Resources */,
+				EA605FC71BC8645300372E76 /* GTMOAuth2ViewTouch.xib in Resources */,
+				EA605FD21BC8650600372E76 /* Main.storyboard in Resources */,
+				EA605FD11BC8650600372E76 /* LaunchScreen.storyboard in Resources */,
+				EA605FC61BC8645300372E76 /* Assets.xcassets in Resources */,
+				EA605FC81BC8645300372E76 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,33 +226,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA54C6AA1BB99480008FC61F /* WeaveConstants.m in Sources */,
-				EA54C6971BB98DCA008FC61F /* AuthViewController.m in Sources */,
-				EA54C6941BB98DCA008FC61F /* AppDelegate.m in Sources */,
-				EA54C6911BB98DCA008FC61F /* main.m in Sources */,
-				EA06D6461BBAE0A200232A42 /* LedFlasherViewController.m in Sources */,
-				EAD5E00B1BBDE0F000809409 /* WeaveAuthorizerManager.m in Sources */,
-				EA54C6C51BB9B935008FC61F /* DeviceSelectionTableViewController.m in Sources */,
+				EA605FB71BC8642F00372E76 /* AuthViewController.m in Sources */,
+				EA605FB91BC8642F00372E76 /* LedFlasherViewController.m in Sources */,
+				EA605FC21BC8644600372E76 /* WeaveConstants.m in Sources */,
+				EA605FC11BC8644600372E76 /* WeaveAuthorizerManager.m in Sources */,
+				EA605FB81BC8642F00372E76 /* DeviceSelectionTableViewController.m in Sources */,
+				EA605FCA1BC8646400372E76 /* main.m in Sources */,
+				EA605FC01BC8644600372E76 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EA54C6981BB98DCA008FC61F /* Main.storyboard */ = {
+		EA605FCD1BC8650600372E76 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA54C6991BB98DCA008FC61F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EA54C69D1BB98DCA008FC61F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA54C69E1BB98DCA008FC61F /* Base */,
+				EA605FCE1BC8650600372E76 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EA605FCF1BC8650600372E76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA605FD01BC8650600372E76 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,15 +347,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/LED\\ Flasher/**",
-					Flasher,
-					"$(PROJECT_DIR)/LED",
-					Flasher,
+					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "LED Flasher/Info.plist";
+				INFOPLIST_FILE = LedFlasher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.LED-Flasher";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LedFlasher;
 			};
 			name = Debug;
 		};
@@ -363,22 +363,19 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/LED\\ Flasher/**",
-					Flasher,
-					"$(PROJECT_DIR)/LED",
-					Flasher,
+					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "LED Flasher/Info.plist";
+				INFOPLIST_FILE = LedFlasher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.LED-Flasher";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LedFlasher;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA54C6871BB98DCA008FC61F /* Build configuration list for PBXProject "LED Flasher" */ = {
+		EA54C6871BB98DCA008FC61F /* Build configuration list for PBXProject "LedFlasher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA54C6A11BB98DCA008FC61F /* Debug */,
@@ -387,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA54C6A31BB98DCA008FC61F /* Build configuration list for PBXNativeTarget "LED Flasher" */ = {
+		EA54C6A31BB98DCA008FC61F /* Build configuration list for PBXNativeTarget "LedFlasher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA54C6A41BB98DCA008FC61F /* Debug */,
