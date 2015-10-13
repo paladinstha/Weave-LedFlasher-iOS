@@ -43,7 +43,7 @@
 
   // Configure the discovery mechanism.
   GWLDiscovery *discovery = [GWLDiscovery sharedInstance];
-  [discovery setAuthorizer:[WeaveAuthorizerManager getAuthorizerIfExists]];
+  [discovery setAuthorizer:[WeaveAuthorizerManager sharedInstance].auth];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,7 +70,7 @@
 - (void)discoveryController:(GWLDiscovery *)controller didAddDevice:(GWLWeaveDevice *)device {
   id<GWLWeaveTransport> transport =
       [GWLWeaveTransport transportForDevice:device
-                                 authorizer:[WeaveAuthorizerManager getAuthorizerIfExists]];
+                                 authorizer:[WeaveAuthorizerManager sharedInstance].auth];
   // Check if the current device supports the LED Flasher command package.
   [transport getCommandDefsForDevice:device
                              handler:^(GWLWeaveCommandDefinitions *commands, NSError *error) {

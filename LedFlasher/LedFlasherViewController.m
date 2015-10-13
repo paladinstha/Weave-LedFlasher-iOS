@@ -41,7 +41,7 @@
   // Obtain a transport to the device. The best of Wi-Fi, BLE, and Cloud will be autoselected.
   self.transport =
       [GWLWeaveTransport transportForDevice:_device
-                                 authorizer:[WeaveAuthorizerManager getAuthorizerIfExists]];
+                                 authorizer:[WeaveAuthorizerManager sharedInstance].auth];
 
   // Get the current LED status from the device.
   id<GWLWeaveTransport> txport = (id<GWLWeaveTransport>)_transport;

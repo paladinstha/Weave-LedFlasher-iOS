@@ -20,8 +20,8 @@
 
 @interface WeaveAuthorizerManager : NSObject
 
-+ (id<GTMFetcherAuthorizationProtocol>)getAuthorizerIfExists;
+@property (atomic) id<GTMFetcherAuthorizationProtocol> auth;
 
-+ (void)setAuthorizer:(id<GTMFetcherAuthorizationProtocol>)authorizer;
++ (instancetype)sharedInstance;
 
 @end

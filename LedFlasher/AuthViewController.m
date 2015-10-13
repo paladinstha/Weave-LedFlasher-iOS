@@ -54,7 +54,7 @@
       } else {
         if (authorizer) {
           // Now that we have a valid authorizer, we can save it and move on to device selection.
-          [WeaveAuthorizerManager setAuthorizer:authorizer];
+          [WeaveAuthorizerManager sharedInstance].auth = authorizer;
           [self performSegueWithIdentifier:kWeaveAuthorizationCompletedSegueIdentifier sender:self];
         }
       }
@@ -68,7 +68,7 @@
        } else {
          if (authorizer) {
            // Now that we have a valid authorizer, we can save it and move on to device selection.
-           [WeaveAuthorizerManager setAuthorizer:authorizer];
+           [WeaveAuthorizerManager sharedInstance].auth = authorizer;
            self.moveToDeviceSelection = YES;
          }
        }

@@ -15,38 +15,16 @@
  */
 
 #import "WeaveAuthorizerManager.h"
-#import "WeaveConstants.h"
-
-static id<GTMFetcherAuthorizationProtocol> auth;
-static dispatch_once_t queueCreationPredicate;
-static dispatch_queue_t authorizerAccessQueue;
 
 @implementation WeaveAuthorizerManager
 
-+ (id<GTMFetcherAuthorizationProtocol>)getAuthorizerIfExists {
-  // Create the queue, or wait for the queue to be created.
-  dispatch_once(&queueCreationPredicate, ^{
-    authorizerAccessQueue =
-        dispatch_queue_create(kWeaveAuthorizerManagerQueueLabel, DISPATCH_QUEUE_CONCURRENT);
++ (instancetype)sharedInstance {
+  static dispatch_once_t onceToken;
+  __strong static WeaveAuthorizerManager *sharedManager;
+  dispatch_once(&onceToken, ^{
+    sharedManager = [WeaveAuthorizerManager alloc];
   });
-  // Access the authorizer and return it.
-  __block id<GTMFetcherAuthorizationProtocol> authorizer;
-  dispatch_sync(authorizerAccessQueue, ^{
-    authorizer = auth;
-  });
-  return authorizer;
-}
-
-+ (void)setAuthorizer:(id<GTMFetcherAuthorizationProtocol>)authorizer {
-  // Create the queue, or wait for the queue to be created.
-  dispatch_once(&queueCreationPredicate, ^{
-    authorizerAccessQueue =
-        dispatch_queue_create(kWeaveAuthorizerManagerQueueLabel, DISPATCH_QUEUE_CONCURRENT);
-  });
-  // Set the authorizer from behind a barrier to prevent inconsistent reads.
-  dispatch_barrier_async(authorizerAccessQueue, ^{
-    auth = authorizer;
-  });
+  return sharedManager;
 }
 
 @end
