@@ -16,8 +16,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import <Weave/GWLLoginController.h>
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) GWLLoginController *loginController;
 
 @end

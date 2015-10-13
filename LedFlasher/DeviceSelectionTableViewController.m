@@ -56,7 +56,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   GWLDiscovery *discovery = [GWLDiscovery sharedInstance];
-  [discovery stop];
+  //[discovery stop];
   [discovery removeDelegate:self];
 }
 
@@ -111,7 +111,6 @@
     didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
   NSInteger index = [indexPath row];
   self.device = [_knownDevices objectAtIndex:index];
-  [[GWLDiscovery sharedInstance] stop];
   // A device has been selected - launch the control view.
   [self performSegueWithIdentifier:kWeaveDeviceSelectedSegueIdentifier sender:self];
 }

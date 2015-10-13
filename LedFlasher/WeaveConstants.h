@@ -19,7 +19,6 @@
 @interface WeaveConstants : NSObject
 
 extern NSString *const kWeaveClientId;
-extern NSString *const kWeaveClientSecret;
 extern NSString *const kWeaveDeviceSelectionCellIdentifier;
 extern NSString *const kWeaveAuthorizationCompletedSegueIdentifier;
 extern NSString *const kWeaveDeviceSelectedSegueIdentifier;

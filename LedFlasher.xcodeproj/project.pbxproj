@@ -351,7 +351,7 @@
 				);
 				INFOPLIST_FILE = LedFlasher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.LED-Flasher";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.LedFlasher;
 				PRODUCT_NAME = LedFlasher;
 			};
 			name = Debug;
@@ -367,7 +367,7 @@
 				);
 				INFOPLIST_FILE = LedFlasher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.LED-Flasher";
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.LedFlasher;
 				PRODUCT_NAME = LedFlasher;
 			};
 			name = Release;

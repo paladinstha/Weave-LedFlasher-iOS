@@ -16,6 +16,21 @@
 
 #import "AppDelegate.h"
 
+#import "WeaveConstants.h"
+
 @implementation AppDelegate
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+  self.loginController = [[GWLLoginController alloc] initWithClientId:kWeaveClientId];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+  return [_loginController handleURL:url
+                   sourceApplication:sourceApplication
+                          annotation:annotation];
+}
 
 @end

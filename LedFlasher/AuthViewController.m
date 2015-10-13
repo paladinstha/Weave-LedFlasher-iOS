@@ -17,13 +17,13 @@
 #import <Weave/GWLLoginController.h>
 
 #import "AuthViewController.h"
+#import "AppDelegate.h"
 #import "DeviceSelectionTableViewController.h"
 #import "WeaveAuthorizerManager.h"
 #import "WeaveConstants.h"
 
 @interface AuthViewController ()
 
-@property (nonatomic) GWLLoginController* loginController;
 @property (nonatomic) BOOL moveToDeviceSelection;
 
 @end
@@ -32,8 +32,6 @@
 
 - (void)viewDidLoad {
   self.moveToDeviceSelection = NO;
-  self.loginController = [[GWLLoginController alloc] initWithClientId:kWeaveClientId
-                                                               secret:kWeaveClientSecret];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -46,19 +44,36 @@
 }
 
 - (IBAction)authenticateButtonAction:(id)sender {
-  [_loginController
-      authenticateWithViewController:self
-   completionHandler:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
-    if (error) {
-      NSLog(@"An error occurred during authentication - %@", error);
-    } else {
-      if (authorizer) {
-        // Now that we have a valid authorizer, we can save it and move on to device selection.
-        [WeaveAuthorizerManager setAuthorizer:authorizer];
-        self.moveToDeviceSelection = YES;
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  GWLLoginController *loginController = appDelegate.loginController;
+  if ([loginController isAuthenticated]) {
+    [loginController
+        getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+      if (error) {
+        NSLog(@"An error occurred during authentication - %@", error);
+      } else {
+        if (authorizer) {
+          // Now that we have a valid authorizer, we can save it and move on to device selection.
+          [WeaveAuthorizerManager setAuthorizer:authorizer];
+          [self performSegueWithIdentifier:kWeaveAuthorizationCompletedSegueIdentifier sender:self];
+        }
       }
-    }
-  }];
+    }];
+  } else {
+    [loginController
+     authenticateWithViewController:self
+     completionHandler:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+       if (error) {
+         NSLog(@"An error occurred during authentication - %@", error);
+       } else {
+         if (authorizer) {
+           // Now that we have a valid authorizer, we can save it and move on to device selection.
+           [WeaveAuthorizerManager setAuthorizer:authorizer];
+           self.moveToDeviceSelection = YES;
+         }
+       }
+     }];
+  }
 }
 
 @end

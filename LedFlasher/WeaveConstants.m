@@ -18,11 +18,10 @@
 
 @implementation WeaveConstants
 
-// You can obtain a Weave client ID and client secret at https://console.developers.google.com/
+// You can obtain a Weave client ID at https://console.developers.google.com/
 
-#warning Add your Weave client ID and client secret here!
+#warning Add your Weave client ID here!
 NSString *const kWeaveClientId = @"";
-NSString *const kWeaveClientSecret = @"";
 
 // Constant for table view recycling.
 NSString *const kWeaveDeviceSelectionCellIdentifier = @"weaveDeviceSelectionCellIdentifier";
