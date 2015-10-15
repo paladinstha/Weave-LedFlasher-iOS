@@ -19,7 +19,6 @@
 #import "AuthViewController.h"
 #import "AppDelegate.h"
 #import "DeviceSelectionTableViewController.h"
-#import "WeaveAuthorizerManager.h"
 #import "WeaveConstants.h"
 
 @interface AuthViewController ()
@@ -50,11 +49,10 @@
     [loginController
         getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
       if (error) {
-        NSLog(@"An error occurred during authentication - %@", error);
+        NSLog(@"An error occurred while retrieving the authorizer - %@", error);
       } else {
         if (authorizer) {
-          // Now that we have a valid authorizer, we can save it and move on to device selection.
-          [WeaveAuthorizerManager sharedInstance].auth = authorizer;
+          // Now that we have a valid authorizer, we can move on to device selection.
           [self performSegueWithIdentifier:kWeaveAuthorizationCompletedSegueIdentifier sender:self];
         }
       }
@@ -67,8 +65,7 @@
          NSLog(@"An error occurred during authentication - %@", error);
        } else {
          if (authorizer) {
-           // Now that we have a valid authorizer, we can save it and move on to device selection.
-           [WeaveAuthorizerManager sharedInstance].auth = authorizer;
+           // Now that we have a valid authorizer, we can move on to device selection.
            self.moveToDeviceSelection = YES;
          }
        }

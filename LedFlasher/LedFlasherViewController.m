@@ -18,8 +18,8 @@
 #import <Weave/GWLWeaveCommand.h>
 #import <Weave/GWLWeaveTransport.h>
 
+#import "AppDelegate.h"
 #import "LedFlasherViewController.h"
-#import "WeaveAuthorizerManager.h"
 
 @interface LedFlasherViewController ()
 
@@ -38,29 +38,38 @@
   // Set the connection label to involve the device name.
   [_connectionLabel setText:[NSString stringWithFormat:@"Connected to %@", [_device name]]];
 
-  // Obtain a transport to the device. The best of Wi-Fi, BLE, and Cloud will be autoselected.
-  self.transport =
-      [GWLWeaveTransport transportForDevice:_device
-                                 authorizer:[WeaveAuthorizerManager sharedInstance].auth];
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  GWLLoginController *loginController = appDelegate.loginController;
+  [loginController
+   getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+     if (error) {
+       NSLog(@"An error occurred while retrieving the authorizer - %@", error);
+     } else {
+       // Obtain a transport to the device. The best of Wi-Fi, BLE, and Cloud will be autoselected.
+       self.transport =
+       [GWLWeaveTransport transportForDevice:_device
+                                  authorizer:authorizer];
 
-  // Get the current LED status from the device.
-  id<GWLWeaveTransport> txport = (id<GWLWeaveTransport>)_transport;
-  [txport getStateForDevice:_device handler:^(NSDictionary *state, NSError *error) {
-    if (error) {
-      NSLog(@"An error occurred during device state retrieval - %@", error);
-    } else {
-      // Preset the switches to match the LEDs.
-      NSArray *ledStates = [[state valueForKey:@"_ledflasher"] valueForKey:@"_leds"];
-      [_led1Switch setOn:[ledStates[0] boolValue]];
-      [_led2Switch setOn:[ledStates[1] boolValue]];
-      [_led3Switch setOn:[ledStates[2] boolValue]];
+       // Get the current LED status from the device.
+       id<GWLWeaveTransport> txport = (id<GWLWeaveTransport>)_transport;
+       [txport getStateForDevice:_device handler:^(NSDictionary *state, NSError *error) {
+         if (error) {
+           NSLog(@"An error occurred during device state retrieval - %@", error);
+         } else {
+           // Preset the switches to match the LEDs.
+           NSArray *ledStates = [[state valueForKey:@"_ledflasher"] valueForKey:@"_leds"];
+           [_led1Switch setOn:[ledStates[0] boolValue]];
+           [_led2Switch setOn:[ledStates[1] boolValue]];
+           [_led3Switch setOn:[ledStates[2] boolValue]];
 
-      // Enable the switches.
-      [_led1Switch setEnabled:YES];
-      [_led2Switch setEnabled:YES];
-      [_led3Switch setEnabled:YES];
-    }
-  }];
+           // Enable the switches.
+           [_led1Switch setEnabled:YES];
+           [_led2Switch setEnabled:YES];
+           [_led3Switch setEnabled:YES];
+         }
+       }];
+     }
+   }];
 }
 
 # pragma mark Switch actions

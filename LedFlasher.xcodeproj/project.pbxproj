@@ -16,11 +16,9 @@
 		EA605FB81BC8642F00372E76 /* DeviceSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FB41BC8642F00372E76 /* DeviceSelectionTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FB91BC8642F00372E76 /* LedFlasherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FB61BC8642F00372E76 /* LedFlasherViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FC01BC8644600372E76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBB1BC8644600372E76 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		EA605FC11BC8644600372E76 /* WeaveAuthorizerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBD1BC8644600372E76 /* WeaveAuthorizerManager.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FC21BC8644600372E76 /* WeaveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBF1BC8644600372E76 /* WeaveConstants.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FC61BC8645300372E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC31BC8645300372E76 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		EA605FC71BC8645300372E76 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */; settings = {ASSET_TAGS = (); }; };
-		EA605FC81BC8645300372E76 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC51BC8645300372E76 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		EA605FCA1BC8646400372E76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FC91BC8646400372E76 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FD11BC8650600372E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA605FCD1BC8650600372E76 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		EA605FD21BC8650600372E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA605FCF1BC8650600372E76 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -54,8 +52,6 @@
 		EA605FB61BC8642F00372E76 /* LedFlasherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LedFlasherViewController.m; path = LedFlasher/LedFlasherViewController.m; sourceTree = SOURCE_ROOT; };
 		EA605FBA1BC8644600372E76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LedFlasher/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		EA605FBB1BC8644600372E76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LedFlasher/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		EA605FBC1BC8644600372E76 /* WeaveAuthorizerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaveAuthorizerManager.h; path = LedFlasher/WeaveAuthorizerManager.h; sourceTree = SOURCE_ROOT; };
-		EA605FBD1BC8644600372E76 /* WeaveAuthorizerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaveAuthorizerManager.m; path = LedFlasher/WeaveAuthorizerManager.m; sourceTree = SOURCE_ROOT; };
 		EA605FBE1BC8644600372E76 /* WeaveConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaveConstants.h; path = LedFlasher/WeaveConstants.h; sourceTree = SOURCE_ROOT; };
 		EA605FBF1BC8644600372E76 /* WeaveConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaveConstants.m; path = LedFlasher/WeaveConstants.m; sourceTree = SOURCE_ROOT; };
 		EA605FC31BC8645300372E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LedFlasher/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -104,8 +100,6 @@
 				EAD5E0081BBDE0B500809409 /* Controllers */,
 				EA605FBA1BC8644600372E76 /* AppDelegate.h */,
 				EA605FBB1BC8644600372E76 /* AppDelegate.m */,
-				EA605FBC1BC8644600372E76 /* WeaveAuthorizerManager.h */,
-				EA605FBD1BC8644600372E76 /* WeaveAuthorizerManager.m */,
 				EA605FBE1BC8644600372E76 /* WeaveConstants.h */,
 				EA605FBF1BC8644600372E76 /* WeaveConstants.m */,
 				EA605FCD1BC8650600372E76 /* LaunchScreen.storyboard */,
@@ -215,7 +209,6 @@
 				EA605FD21BC8650600372E76 /* Main.storyboard in Resources */,
 				EA605FD11BC8650600372E76 /* LaunchScreen.storyboard in Resources */,
 				EA605FC61BC8645300372E76 /* Assets.xcassets in Resources */,
-				EA605FC81BC8645300372E76 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +222,6 @@
 				EA605FB71BC8642F00372E76 /* AuthViewController.m in Sources */,
 				EA605FB91BC8642F00372E76 /* LedFlasherViewController.m in Sources */,
 				EA605FC21BC8644600372E76 /* WeaveConstants.m in Sources */,
-				EA605FC11BC8644600372E76 /* WeaveAuthorizerManager.m in Sources */,
 				EA605FB81BC8642F00372E76 /* DeviceSelectionTableViewController.m in Sources */,
 				EA605FCA1BC8646400372E76 /* main.m in Sources */,
 				EA605FC01BC8644600372E76 /* AppDelegate.m in Sources */,

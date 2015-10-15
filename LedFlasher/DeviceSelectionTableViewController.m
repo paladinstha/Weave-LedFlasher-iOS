@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-#import <Weave/GWLDiscovery.h>
 #import <Weave/GWLCommandProtocol.h>
+#import <Weave/GWLDeviceScanner.h>
 #import <Weave/GWLWeaveCommandDefinitions.h>
 #import <Weave/GWLWeaveDevice.h>
 #import <Weave/GWLWeaveTransport.h>
 
+#import "AppDelegate.h"
 #import "DeviceSelectionTableViewController.h"
 #import "LedFlasherViewController.h"
-#import "WeaveAuthorizerManager.h"
 #import "WeaveConstants.h"
 
-@interface DeviceSelectionTableViewController () <GWLDiscoveryDelegate>
+@interface DeviceSelectionTableViewController () <GWLDeviceScannerDelegate>
 
 @property (nonatomic) NSMutableArray *knownDevices;
 @property (nonatomic) GWLWeaveDevice *device;
@@ -42,22 +42,31 @@
   self.knownDevices = [[NSMutableArray alloc] init];
 
   // Configure the discovery mechanism.
-  GWLDiscovery *discovery = [GWLDiscovery sharedInstance];
-  [discovery setAuthorizer:[WeaveAuthorizerManager sharedInstance].auth];
+  GWLDeviceScanner *scanner = [GWLDeviceScanner sharedInstance];
+  [scanner addDelegate:self];
+
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  GWLLoginController *loginController = appDelegate.loginController;
+  [loginController
+   getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+     if (error) {
+       NSLog(@"An error occurred while retrieving the authorizer - %@", error);
+     } else {
+       [scanner startWithAuthorizer:authorizer];
+     }
+   }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  GWLDiscovery *discovery = [GWLDiscovery sharedInstance];
-  [discovery addDelegate:self];
-  [discovery start];
+  GWLDeviceScanner *scanner = [GWLDeviceScanner sharedInstance];
+  [scanner addDelegate:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
-  GWLDiscovery *discovery = [GWLDiscovery sharedInstance];
-  //[discovery stop];
-  [discovery removeDelegate:self];
+  GWLDeviceScanner *scanner = [GWLDeviceScanner sharedInstance];
+  [scanner removeDelegate:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -65,38 +74,48 @@
   [destination setDevice:_device];
 }
 
-# pragma mark GWLDiscoveryDelegate implementation
+# pragma mark GWLDeviceScannerDelegate implementation
 
-- (void)discoveryController:(GWLDiscovery *)controller didAddDevice:(GWLWeaveDevice *)device {
-  id<GWLWeaveTransport> transport =
-      [GWLWeaveTransport transportForDevice:device
-                                 authorizer:[WeaveAuthorizerManager sharedInstance].auth];
-  // Check if the current device supports the LED Flasher command package.
-  [transport getCommandDefsForDevice:device
-                             handler:^(GWLWeaveCommandDefinitions *commands, NSError *error) {
-    if (error) {
-      NSLog(@"An error occurred during device discovery - %@", error);
-    } else {
-      NSInteger supportedPackagesCount = [commands numberOfCommandPackages];
-      for (int i = 0; i < supportedPackagesCount; ++i) {
-        if ([[commands packageNameForPackage:i] isEqualToString:@"_ledflasher"]) {
-          // The current device is a LED Flasher, keep it.
-          [_knownDevices addObject:device];
-          [self.tableView reloadData];
-          break;
+- (void)deviceScanner:(GWLDeviceScanner *)controller didAddDevice:(GWLWeaveDevice *)device {
+
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  GWLLoginController *loginController = appDelegate.loginController;
+  [loginController
+   getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+     if (error) {
+       NSLog(@"An error occurred while retrieving the authorizer - %@", error);
+     } else {
+       id<GWLWeaveTransport> transport =
+       [GWLWeaveTransport transportForDevice:device
+                                  authorizer:authorizer];
+       // Check if the current device supports the LED Flasher command package.
+       [transport getCommandDefsForDevice:device
+                                  handler:^(GWLWeaveCommandDefinitions *commands, NSError *error) {
+        if (error) {
+          NSLog(@"An error occurred during device discovery - %@", error);
+        } else {
+          NSInteger supportedPackagesCount = [commands numberOfCommandPackages];
+          for (int i = 0; i < supportedPackagesCount; ++i) {
+            if ([[commands packageNameForPackage:i] isEqualToString:@"_ledflasher"]) {
+              // The current device is a LED Flasher, keep it.
+              [_knownDevices addObject:device];
+              [self.tableView reloadData];
+              break;
+            }
+          }
         }
-      }
-    }
-  }];
+      }];
+     }
+   }];
 }
 
-- (void)discoveryController:(GWLDiscovery *)controller didRemoveDevice:(GWLWeaveDevice *)device {
+- (void)deviceScanner:(GWLDeviceScanner *)controller didRemoveDevice:(GWLWeaveDevice *)device {
   // Removal is idempotent; no existence checks required.
   [_knownDevices removeObject:device];
   [self.tableView reloadData];
 }
 
-- (void)discoveryController:(GWLDiscovery *)controller didUpdateDevice:(GWLWeaveDevice *)device {
+- (void)deviceScanner:(GWLDeviceScanner *)controller didUpdateDevice:(GWLWeaveDevice *)device {
   // We can "update" a device by removing and readding it. Only do so if we already have the device.
   if ([_knownDevices indexOfObject:device] != NSNotFound) {
     [_knownDevices removeObject:device];
@@ -118,7 +137,7 @@
 # pragma mark UITableViewDataSource implementation
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [[[GWLDiscovery sharedInstance] devices] count];
+  return [_knownDevices count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
