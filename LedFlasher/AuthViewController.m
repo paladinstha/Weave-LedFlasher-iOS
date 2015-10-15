@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import <Weave/GWLLoginController.h>
+#import <GoogleWeave/GWLLoginController.h>
 
 #import "AuthViewController.h"
 #import "AppDelegate.h"

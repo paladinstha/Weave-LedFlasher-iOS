@@ -18,7 +18,6 @@
 		EA605FC01BC8644600372E76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBB1BC8644600372E76 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FC21BC8644600372E76 /* WeaveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FBF1BC8644600372E76 /* WeaveConstants.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FC61BC8645300372E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC31BC8645300372E76 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		EA605FC71BC8645300372E76 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */; settings = {ASSET_TAGS = (); }; };
 		EA605FCA1BC8646400372E76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA605FC91BC8646400372E76 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		EA605FD11BC8650600372E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA605FCD1BC8650600372E76 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		EA605FD21BC8650600372E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA605FCF1BC8650600372E76 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -55,7 +54,6 @@
 		EA605FBE1BC8644600372E76 /* WeaveConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaveConstants.h; path = LedFlasher/WeaveConstants.h; sourceTree = SOURCE_ROOT; };
 		EA605FBF1BC8644600372E76 /* WeaveConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeaveConstants.m; path = LedFlasher/WeaveConstants.m; sourceTree = SOURCE_ROOT; };
 		EA605FC31BC8645300372E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LedFlasher/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = LedFlasher/GTMOAuth2ViewTouch.xib; sourceTree = SOURCE_ROOT; };
 		EA605FC51BC8645300372E76 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LedFlasher/Info.plist; sourceTree = SOURCE_ROOT; };
 		EA605FC91BC8646400372E76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LedFlasher/main.m; sourceTree = SOURCE_ROOT; };
 		EA605FCE1BC8650600372E76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LedFlasher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				EA605FC31BC8645300372E76 /* Assets.xcassets */,
-				EA605FC41BC8645300372E76 /* GTMOAuth2ViewTouch.xib */,
 				EA605FC51BC8645300372E76 /* Info.plist */,
 				EA54C6C01BB9B460008FC61F /* Frameworks */,
 			);
@@ -205,7 +202,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA605FC71BC8645300372E76 /* GTMOAuth2ViewTouch.xib in Resources */,
 				EA605FD21BC8650600372E76 /* Main.storyboard in Resources */,
 				EA605FD11BC8650600372E76 /* LaunchScreen.storyboard in Resources */,
 				EA605FC61BC8645300372E76 /* Assets.xcassets in Resources */,

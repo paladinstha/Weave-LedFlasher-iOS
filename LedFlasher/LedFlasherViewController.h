@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <Weave/GWLWeaveDevice.h>
+#import <GoogleWeave/GWLWeaveDevice.h>
 
 @interface LedFlasherViewController : UIViewController
 

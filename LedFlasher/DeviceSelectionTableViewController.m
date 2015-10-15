@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#import <Weave/GWLCommandProtocol.h>
-#import <Weave/GWLDeviceScanner.h>
-#import <Weave/GWLWeaveCommandDefinitions.h>
-#import <Weave/GWLWeaveDevice.h>
-#import <Weave/GWLWeaveTransport.h>
+#import <GoogleWeave/GWLCommandProtocol.h>
+#import <GoogleWeave/GWLDeviceScanner.h>
+#import <GoogleWeave/GWLWeaveCommandDefinitions.h>
+#import <GoogleWeave/GWLWeaveDevice.h>
+#import <GoogleWeave/GWLWeaveTransport.h>
 
 #import "AppDelegate.h"
 #import "DeviceSelectionTableViewController.h"

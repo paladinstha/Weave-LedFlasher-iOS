@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#import <Weave/GWLCommandProtocol.h>
-#import <Weave/GWLWeaveCommand.h>
-#import <Weave/GWLWeaveTransport.h>
+#import <GoogleWeave/GWLCommandProtocol.h>
+#import <GoogleWeave/GWLWeaveCommand.h>
+#import <GoogleWeave/GWLWeaveTransport.h>
 
 #import "AppDelegate.h"
 #import "LedFlasherViewController.h"
@@ -35,6 +35,7 @@
 @implementation LedFlasherViewController
 
 - (void)viewDidLoad {
+  [self.navigationItem setHidesBackButton:YES];
   // Set the connection label to involve the device name.
   [_connectionLabel setText:[NSString stringWithFormat:@"Connected to %@", [_device name]]];
 

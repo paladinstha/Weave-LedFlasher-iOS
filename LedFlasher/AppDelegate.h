@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <Weave/GWLLoginController.h>
+#import <GWLLoginController.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
