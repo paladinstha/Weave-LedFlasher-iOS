@@ -24,6 +24,7 @@
   self.loginController = [[GWLLoginController alloc] initWithClientId:kWeaveClientId];
 }
 
+// [START url-forwarding]
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -32,5 +33,6 @@
                    sourceApplication:sourceApplication
                           annotation:annotation];
 }
+// [END url-forwarding]
 
 @end

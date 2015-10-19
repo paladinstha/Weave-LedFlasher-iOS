@@ -46,17 +46,20 @@
      if (error) {
        NSLog(@"An error occurred while retrieving the authorizer - %@", error);
      } else {
-       // Obtain a transport to the device. The best of Wi-Fi, BLE, and Cloud will be autoselected.
+       // [START state]
+       // Obtain a transport to the device. The best of local Wi-Fi and Cloud will be autoselected.
        self.transport =
        [GWLWeaveTransport transportForDevice:_device
                                   authorizer:authorizer];
 
-       // Get the current LED status from the device.
+       // Get the current state from the device.
        id<GWLWeaveTransport> txport = (id<GWLWeaveTransport>)_transport;
        [txport getStateForDevice:_device handler:^(NSDictionary *state, NSError *error) {
          if (error) {
            NSLog(@"An error occurred during device state retrieval - %@", error);
          } else {
+           // Obtained device state.
+           // [START_EXCLUDE]
            // Preset the switches to match the LEDs.
            NSArray *ledStates = [[state valueForKey:@"_ledflasher"] valueForKey:@"_leds"];
            [_led1Switch setOn:[ledStates[0] boolValue]];
@@ -67,8 +70,10 @@
            [_led1Switch setEnabled:YES];
            [_led2Switch setEnabled:YES];
            [_led3Switch setEnabled:YES];
+           // [END_EXCLUDE]
          }
        }];
+       // [END state]
      }
    }];
 }
@@ -85,6 +90,7 @@
 #pragma mark _ledflasher commands
 
 - (void)setLed:(NSInteger)ledNum toState:(BOOL)state {
+  // [START command-send]
   NSDictionary *commandParams =
       @{ @"_led" : @(ledNum), @"_on" : @(state)};
   GWLWeaveCommand *ledCommand = [[GWLWeaveCommand alloc] initWithPackageName:@"_ledflasher"
@@ -98,6 +104,7 @@
         NSLog(@"An error occurred during command execution - %@", error);
       }
   }];
+  // [END command-send]
 }
 
 @end

@@ -45,32 +45,32 @@
 - (IBAction)authenticateButtonAction:(id)sender {
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   GWLLoginController *loginController = appDelegate.loginController;
+  // [START authentication]
   if ([loginController isAuthenticated]) {
     [loginController
         getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
-      if (error) {
-        NSLog(@"An error occurred while retrieving the authorizer - %@", error);
-      } else {
-        if (authorizer) {
-          // Now that we have a valid authorizer, we can move on to device selection.
-          [self performSegueWithIdentifier:kWeaveAuthorizationCompletedSegueIdentifier sender:self];
-        }
-      }
-    }];
+          if (error) {
+            NSLog(@"An error occurred while retrieving the authorizer - %@", error);
+          } else {
+            // Now that we have a valid authorizer, we can move on to device selection.
+            [self performSegueWithIdentifier:kWeaveAuthorizationCompletedSegueIdentifier
+                                      sender:self];
+          }
+        }];
   } else {
     [loginController
      authenticateWithViewController:self
-     completionHandler:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+                  completionHandler:^(id<GTMFetcherAuthorizationProtocol> authorizer,
+                      NSError *error) {
        if (error) {
          NSLog(@"An error occurred during authentication - %@", error);
        } else {
-         if (authorizer) {
-           // Now that we have a valid authorizer, we can move on to device selection.
-           self.moveToDeviceSelection = YES;
-         }
+         // Now that we have a valid authorizer, we can move on to device selection.
+         self.moveToDeviceSelection = YES;
        }
      }];
   }
+  // [END authentication]
 }
 
 @end

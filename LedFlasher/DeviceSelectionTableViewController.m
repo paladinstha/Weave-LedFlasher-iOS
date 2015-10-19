@@ -41,12 +41,14 @@
 
   self.knownDevices = [[NSMutableArray alloc] init];
 
+  // [START scanning]
   // Configure the discovery mechanism.
   GWLDeviceScanner *scanner = [GWLDeviceScanner sharedInstance];
   [scanner addDelegate:self];
-
+  // [START_EXCLUDE silent]
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   GWLLoginController *loginController = appDelegate.loginController;
+  // [END_EXCLUDE]
   [loginController
    getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
      if (error) {
@@ -55,6 +57,7 @@
        [scanner startWithAuthorizer:authorizer];
      }
    }];
+  // [END scanning]
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -76,8 +79,9 @@
 
 # pragma mark GWLDeviceScannerDelegate implementation
 
+// [START scanning-delegate]
 - (void)deviceScanner:(GWLDeviceScanner *)controller didAddDevice:(GWLWeaveDevice *)device {
-
+  // [START_EXCLUDE silent]
   AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
   GWLLoginController *loginController = appDelegate.loginController;
   [loginController
@@ -85,21 +89,26 @@
      if (error) {
        NSLog(@"An error occurred while retrieving the authorizer - %@", error);
      } else {
+       // [START command-defs]
        id<GWLWeaveTransport> transport =
        [GWLWeaveTransport transportForDevice:device
                                   authorizer:authorizer];
-       // Check if the current device supports the LED Flasher command package.
+       // Retrieve the device's command definitions.
        [transport getCommandDefsForDevice:device
                                   handler:^(GWLWeaveCommandDefinitions *commands, NSError *error) {
         if (error) {
           NSLog(@"An error occurred during device discovery - %@", error);
         } else {
+          // Obtained commands.
+          // [END command-defs]
           NSInteger supportedPackagesCount = [commands numberOfCommandPackages];
           for (int i = 0; i < supportedPackagesCount; ++i) {
             if ([[commands packageNameForPackage:i] isEqualToString:@"_ledflasher"]) {
               // The current device is a LED Flasher, keep it.
+              // [END_EXCLUDE]
               [_knownDevices addObject:device];
               [self.tableView reloadData];
+              // [START_EXCLUDE silent]
               break;
             }
           }
@@ -107,6 +116,7 @@
       }];
      }
    }];
+  // [END_EXCLUDE]
 }
 
 - (void)deviceScanner:(GWLDeviceScanner *)controller didRemoveDevice:(GWLWeaveDevice *)device {
@@ -123,6 +133,7 @@
     [self.tableView reloadData];
   }
 }
+// [END scanning-delegate]
 
 # pragma mark UITableViewDelegate implementation
 
