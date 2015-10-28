@@ -101,16 +101,12 @@
         } else {
           // Obtained commands.
           // [END command-defs]
-          NSInteger supportedPackagesCount = [commands numberOfCommandPackages];
-          for (int i = 0; i < supportedPackagesCount; ++i) {
-            if ([[commands packageNameForPackage:i] isEqualToString:@"_ledflasher"]) {
-              // The current device is a LED Flasher, keep it.
-              // [END_EXCLUDE]
-              [_knownDevices addObject:device];
-              [self.tableView reloadData];
-              // [START_EXCLUDE silent]
-              break;
-            }
+          if ([[commands packages] objectForKey:@"_ledflasher"]) {
+            // The current device is a LED Flasher, keep it.
+            // [END_EXCLUDE]
+            [_knownDevices addObject:device];
+            [self.tableView reloadData];
+            // [START_EXCLUDE silent]
           }
         }
       }];
