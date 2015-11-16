@@ -18,6 +18,7 @@
 #import <GoogleWeave/GWLDeviceScanner.h>
 #import <GoogleWeave/GWLWeaveCommandDefinitions.h>
 #import <GoogleWeave/GWLWeaveDevice.h>
+#import <GoogleWeave/GWLWeaveManagementLauncher.h>
 #import <GoogleWeave/GWLWeaveTransport.h>
 
 #import "AppDelegate.h"
@@ -130,6 +131,23 @@
   }
 }
 // [END scanning-delegate]
+
+# pragma mark Add Device Button
+- (IBAction)addDeviceButtonAction:(id)sender {
+  AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  GWLLoginController *loginController = appDelegate.loginController;
+
+  [loginController getAuthorizer:^(id<GTMFetcherAuthorizationProtocol> authorizer, NSError *error) {
+    if (error) {
+      NSLog(@"An error occurred while retrieving the authorizer - %@", error);
+    } else {
+      [[GWLWeaveManagementLauncher sharedInstance]
+          requestDeviceAccessFromUserAtScope:kGWLAppRequestedScopeUser
+                                  authorizer:authorizer
+                              viewController:self];
+    }
+  }];
+}
 
 # pragma mark UITableViewDelegate implementation
 
