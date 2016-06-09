@@ -1,8 +1,8 @@
-#Weave LED Flasher iOS
+# Weave LEDFlasher iOS
+Weave LEDFlasher iOS shows how to send Weave commands from iOS. This app
+demonstrates turning LEDs on and off via commands sent via the Weave iOS SDK.
 
-Requires Xcode 7.0 or higher.
-
-#Setup
+## Setup
 
 1. Install [CocoaPods](https://cocoapods.org)
 
@@ -17,4 +17,26 @@ Requires Xcode 7.0 or higher.
 6. Put the `client ID` in the `kWeaveClientId` constant in `WeaveConstants.m`.
 
 7. Go to _Info > URL Types_. Create two URL types. On one, set the _URL Schemes_ to the `iOS URL Scheme` from the console. On the other, set the _URL Schemes_ to the app's bundle identifier.
+
+## Documentation
+
+Visit the [Weave homepage](https://developers.google.com/weave/).
+
+## Technical Details
+
+This sample is published. No Objective-C class prefix is used. This sample
+requires XCode 7.0 or later.
+
+## Tags
+- Ubiquity 2016
+
+## Technologies
+- iOS
+- Weave
+- Developer Console
+
+## Languages
+- Objective-C
+
+
 
